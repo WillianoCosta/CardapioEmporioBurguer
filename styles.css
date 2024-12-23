@@ -16,9 +16,9 @@ body {
 
 header {
   text-align: center;
-  background-color: #f4a20c;
+  background-color: #f28502;
   padding: 15px 0;
-  border-bottom: 5px solid #e58c0b;
+  border-bottom: 5px solid #f28502;
 }
 
 header .logo {
@@ -43,11 +43,11 @@ header h1 {
 #table-title {
   font-size: 18px;
   margin-bottom: 15px;
-  color: #f4a20c;
+  color: #f28502;
 }
 
 .table-btn {
-  background-color: #f4a20c;
+  background-color: #f28502;
   border: none;
   color: #fff;
   padding: 10px 15px;
@@ -74,7 +74,7 @@ main {
 
 #menu {
   background-color: #000;
-  border: 1px solid #f4a20c;
+  border: 1px solid #f28502;
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 20px;
@@ -83,7 +83,7 @@ main {
 #menu h2 {
   text-align: center;
   font-size: 22px;
-  color: #f4a20c;
+  color: #f28502;
   margin-bottom: 20px;
 }
 
@@ -95,7 +95,7 @@ main {
   color: #fff;
   font-size: 20px;
   margin-bottom: 10px;
-  border-bottom: 2px solid #f4a20c;
+  border-bottom: 2px solid #f28502;
   padding-bottom: 5px;
 }
 
@@ -110,13 +110,13 @@ main {
 }
 
 .menu-item p {
-  color: #f4a20c;
+  color: #f28502;
   font-size: 14px;
   margin: 0;
 }
 
 .menu-item button {
-  background-color: #f4a20c;
+  background-color: #f28502;
   border: none;
   color: #fff;
   padding: 5px 10px;
@@ -125,12 +125,12 @@ main {
 }
 
 .menu-item button:hover {
-  background-color: #e58c0b;
+  background-color: #f28502;
 }
 
 #cart {
   background-color: #222;
-  border: 1px solid #f4a20c;
+  border: 1px solid #f28502;
   border-radius: 10px;
   padding: 20px;
 }
@@ -138,7 +138,7 @@ main {
 #cart h2 {
   text-align: center;
   font-size: 22px;
-  color: #f4a20c;
+  color: #f28502;
   margin-bottom: 20px;
 }
 
@@ -152,7 +152,7 @@ main {
 
 #cart-items li {
   margin-bottom: 10px;
-  border-bottom: 0px solid #f4a20c;
+  border-bottom: 0px solid #f28502;
   padding-bottom: 5px;
 }
 
@@ -163,7 +163,7 @@ main {
 }
 
 #payment-methods button {
-  background-color: #f4a20c;
+  background-color: #f28502;
   border: none;
   color: #fff;
   padding: 10px 20px;
@@ -180,12 +180,12 @@ main {
 #payment-info {
   text-align: center;
   margin-top: 10px;
-  color: #f4a20c;
+  color: #f28502;
   font-size: 16px;
 }
 
 #send-order-btn {
-  background-color: #f4a20c;
+  background-color: #f28502;
   border: none;
   color: #fff;
   padding: 10px 20px;
@@ -223,11 +223,11 @@ background-color: #0056b3;
 }
 
 .plus-btn {
-background-color: #e58c0b;
+background-color: #f28502;
 }
 
 .plus-btn:hover {
-background-color: #c77b09;
+background-color: #f28502;
 }
 
 .minus-btn {
@@ -280,7 +280,7 @@ color: #c82333;
           right: 30px;
           padding: 10px 20px;
           background-color: #fcfbfb;
-          color: #c77b09;
+          color: #f28502;
           border-radius: 5px;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
           opacity: 0;
@@ -307,7 +307,7 @@ color: #c82333;
   white-space: nowrap;
   padding: 0;
   margin: 0;
-  background-color: #f4a20c;
+  background-color: #f28502;
   scrollbar-width: none; /* Remove o scroll visível em navegadores compatíveis */
 }
 
@@ -337,7 +337,34 @@ color: #c82333;
 /* Responsividade */
 @media (max-width: 480px) {
   #menu nav a {
-    font-size: 17px;
+    font-size: 18px;
     padding: 8px 10px;
   }
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Faz o conteúdo principal ocupar todo o espaço disponível */
+}
+
+footer {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
