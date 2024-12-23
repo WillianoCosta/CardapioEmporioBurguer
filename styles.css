@@ -321,6 +321,7 @@ color: #c82333;
 
 #menu nav a {
   text-decoration: none;
+  font-size: 18px
   color: #faf7f7;
   font-weight: bold;
   padding: 10px 15px;
@@ -336,7 +337,7 @@ color: #c82333;
 /* Responsividade */
 @media (max-width: 480px) {
   #menu nav a {
-    font-size: 14px;
+    font-size: 17px;
     padding: 8px 10px;
   }
 }
