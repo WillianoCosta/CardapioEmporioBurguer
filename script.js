@@ -110,8 +110,18 @@ Forma de pagamento: ${paymentMethod}
 Total: R$${total.toFixed(2)}
 ${trocoInfo}
   `;
+
+  // Abre o WhatsApp com a mensagem
   window.open(`https://wa.me/5584996106961?text=${encodeURIComponent(message)}`);
+
+  // Limpa o carrinho
+  cart = [];
+  updateCart(); // Atualiza a interface do carrinho
+
+  // Mostra uma mensagem de confirmação ao usuário
+  document.getElementById("confirmation-msg").textContent = "Pedido enviado com sucesso! O carrinho foi limpo.";
 }
+
 document.querySelectorAll('nav ul li a').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault(); // Previne o comportamento padrão do link
@@ -129,4 +139,3 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     }
   });
 });
-
