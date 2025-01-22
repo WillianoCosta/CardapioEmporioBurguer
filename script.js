@@ -5,7 +5,7 @@ let paymentMethod = null;
 function selectTable(tableNumber) {
   selectedTable = tableNumber;
   document.getElementById("table-title").textContent = `Mesa ${tableNumber}`;
-  document.getElementById("confirmation-msg").textContent = "Faça seu pedido!";
+  document.getElementById("confirmation-msg").textContent = "Faça o pedido!";
   const buttons = document.querySelectorAll(".table-btn");
   buttons.forEach(button => button.style.display = "none");
 }
@@ -86,9 +86,9 @@ function selectPayment(method) {
   if (method === "dinheiro") {
     paymentInfo.innerHTML = `<label>Troco pra quanto?</label><input id="cash-input" type="number" placeholder="Ex: 100">`;
   } else if (method === "cartão") {
-    paymentInfo.textContent = "Por favor, chame o garçom ou compareça ao balcão para efetuar o pagamento!";
+    paymentInfo.textContent = "Leve a maquininha à mesa do cliente ou peça-o para comparecer ao balcão para efetuar o pagamento!";
   } else if (method === "pix") {
-    paymentInfo.textContent = "Chave Pix: 5584996106961. Envie o comprovante para confirmação!";
+    paymentInfo.textContent = "Passe a chave pix 5584996239839 para o cliente efetuar o pagamento e envie o comprovante para confirmação!";
   }
 }
 
@@ -100,7 +100,7 @@ function sendOrder() {
   if (paymentMethod === "dinheiro" && cashInput) {
     const cash = parseFloat(cashInput.value);
     const troco = cash - total;
-    trocoInfo = `Valor pago: R$${cash}, Troco: R$${troco.toFixed(2)}`;
+    trocoInfo = `Valor a pagar: R$${cash}, Troco: R$${troco.toFixed(2)}`;
   }
 
   const message = `
@@ -112,14 +112,14 @@ ${trocoInfo}
   `;
 
   // Abre o WhatsApp com a mensagem
-  window.open(`https://wa.me/5584996106961?text=${encodeURIComponent(message)}`);
+  window.open(`https://wa.me/5584996239839?text=${encodeURIComponent(message)}`);
 
   // Limpa o carrinho
   cart = [];
   updateCart(); // Atualiza a interface do carrinho
 
   // Mostra uma mensagem de confirmação ao usuário
-  document.getElementById("confirmation-msg").textContent = "Pedido enviado com sucesso! O carrinho foi limpo.";
+  document.getElementById("confirmation-msg").textContent = "Pedido enviado com sucesso! O carrinho foi limpo. Atualize a página para realizar um novo pedido!";
 }
 
 document.querySelectorAll('nav ul li a').forEach(link => {
